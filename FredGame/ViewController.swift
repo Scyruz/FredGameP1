@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var pendingCounter: UILabel!
     @IBOutlet weak var turnIndicator: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var highestScoresButton: UIButton!
     @IBOutlet weak var scoreCounter: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     // MARK: UIViewController
     override func viewDidLoad() {
@@ -45,6 +47,20 @@ class ViewController: UIViewController {
         playRound(roundNumber: 1)
         score = 0
         scoreCounter.text = "0"
+        
+        sender.isEnabled = false
+        highestScoresButton.isEnabled = false
+        
+        button1.isEnabled = true
+        button2.isEnabled = true
+        button3.isEnabled = true
+        button4.isEnabled = true
+        button5.isEnabled = true
+        button6.isEnabled = true
+        button7.isEnabled = true
+        button8.isEnabled = true
+        button9.isEnabled = true
+        
     }
     
     @IBAction func userResponse(_ sender: UIButton) {
@@ -52,6 +68,16 @@ class ViewController: UIViewController {
         let currentPendingCounter = Int(self.pendingCounter.text!)
         let newPendingCounter = currentPendingCounter! - 1
         pendingCounter.text = String(newPendingCounter)
+        
+        button1.isEnabled = true
+        button2.isEnabled = true
+        button3.isEnabled = true
+        button4.isEnabled = true
+        button5.isEnabled = true
+        button6.isEnabled = true
+        button7.isEnabled = true
+        button8.isEnabled = true
+        button9.isEnabled = true
         
         sender.alpha = 1
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (nil) in
@@ -79,6 +105,20 @@ class ViewController: UIViewController {
             top10.add(newScore: score)
             scoreCounter.text = "0"
             print(top10.top10List)
+            
+            playButton.isEnabled = true
+            highestScoresButton.isEnabled = true
+            
+            button1.isEnabled = false
+            button2.isEnabled = false
+            button3.isEnabled = false
+            button4.isEnabled = false
+            button5.isEnabled = false
+            button6.isEnabled = false
+            button7.isEnabled = false
+            button8.isEnabled = false
+            button9.isEnabled = false
+           
         }
         
         
@@ -95,6 +135,16 @@ class ViewController: UIViewController {
         turnIndicator.text = "Fred"
         pendingCounter.text = String(roundNumber)
         processSequenceButton(sequenceList : sequenceList, index : 0)
+        
+        button1.isEnabled = false
+        button2.isEnabled = false
+        button3.isEnabled = false
+        button4.isEnabled = false
+        button5.isEnabled = false
+        button6.isEnabled = false
+        button7.isEnabled = false
+        button8.isEnabled = false
+        button9.isEnabled = false
     }
     
     func processSequenceButton(sequenceList : [Int], index : Int) {
@@ -113,6 +163,16 @@ class ViewController: UIViewController {
             } else {
                 self.turnIndicator.text = "You"
                 self.pendingCounter.text = String(sequenceList.count)
+                
+                self.button1.isEnabled = true
+                self.button2.isEnabled = true
+                self.button3.isEnabled = true
+                self.button4.isEnabled = true
+                self.button5.isEnabled = true
+                self.button6.isEnabled = true
+                self.button7.isEnabled = true
+                self.button8.isEnabled = true
+                self.button9.isEnabled = true
             }
         }
     }
@@ -128,6 +188,17 @@ class ViewController: UIViewController {
         buttonsGrid.insert(button7, at: 7)
         buttonsGrid.insert(button8, at: 8)
         buttonsGrid.insert(button9, at: 9)
+        
+        button1.isEnabled = false
+        button2.isEnabled = false
+        button3.isEnabled = false
+        button4.isEnabled = false
+        button5.isEnabled = false
+        button6.isEnabled = false
+        button7.isEnabled = false
+        button8.isEnabled = false
+        button9.isEnabled = false
+
     }
 }
 
