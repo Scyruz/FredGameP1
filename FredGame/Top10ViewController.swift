@@ -19,13 +19,18 @@ class Top10ViewController: UIViewController {
     @IBOutlet weak var top9: UILabel!
     @IBOutlet weak var top10: UILabel!
     
+    
+    
     func configureView() {
         
+       
+                
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     var top10data : Top10? {

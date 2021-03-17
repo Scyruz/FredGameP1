@@ -131,7 +131,18 @@ class ViewController: UIViewController {
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+       // let controller = (segue.destination as! Top10ViewController)
+//        controller.top1.text = String(top10.top10List[0])
+//        controller.top2.text = String(top10.top10List[1])
+//        controller.top3.text = String(top10.top10List[2])
+//        controller.top4.text = String(top10.top10List[3])
+//        controller.top5.text = String(top10.top10List[4])
+//        controller.top6.text = String(top10.top10List[5])
+//        controller.top7.text = String(top10.top10List[6])
+//        controller.top8.text = String(top10.top10List[7])
+//        controller.top9.text = String(top10.top10List[8])
+//        controller.top10.text = String(top10.top10List[9])
+
     }
     
     // MARK: Game Methods
