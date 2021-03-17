@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pendingCounter: UILabel!
     @IBOutlet weak var turnIndicator: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var scoreCounter: UILabel!
     
     // MARK: UIViewController
     override func viewDidLoad() {
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
         status.text = "Playing"
         playRound(roundNumber: 1)
         score = 0
+        scoreCounter.text = "0"
     }
     
     @IBAction func userResponse(_ sender: UIButton) {
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
                
         if sequenceList[pressedButtonCounter] == pressedButtonIndex {
             score = score + Int64(pressedButtonCounter + 1) * 100
+            scoreCounter.text = String(score)
             print(score)
             
             if pressedButtonCounter == sequenceList.count - 1 {
@@ -74,6 +77,7 @@ class ViewController: UIViewController {
             status.text = "Finished"
             pendingCounter.text = "0"
             top10.add(newScore: score)
+            scoreCounter.text = "0"
             print(top10.top10List)
         }
         

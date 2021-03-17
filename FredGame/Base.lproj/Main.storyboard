@@ -144,6 +144,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Highest Scores"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-9s-sDI">
+                                <rect key="frame" x="28" y="148" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-nc-JpU" userLabel="scoreValue">
+                                <rect key="frame" x="125" y="148" width="247" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,6 +173,7 @@
                         <outlet property="button8" destination="kkI-3s-3rb" id="q3b-lN-xWf"/>
                         <outlet property="button9" destination="qSR-F9-Ls0" id="LIq-5h-s4M"/>
                         <outlet property="pendingCounter" destination="uSe-zF-EVv" id="mC9-5y-1O8"/>
+                        <outlet property="scoreCounter" destination="KxD-nc-JpU" id="2j8-TN-OT2"/>
                         <outlet property="status" destination="ec1-bv-I9A" id="Bnu-Q4-Wgb"/>
                         <outlet property="turnIndicator" destination="z2f-u6-T6s" id="zbp-Iy-cyf"/>
                     </connections>
