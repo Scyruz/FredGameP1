@@ -123,6 +123,11 @@ class ViewController: UIViewController {
             button7.isEnabled = false
             button8.isEnabled = false
             button9.isEnabled = false
+            
+            let alert = UIAlertController(title: "GAME STATUS", message: "Game Over", preferredStyle: UIAlertController.Style.alert)
+                              
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alert, animated: true, completion: nil)
            
         }
         
