@@ -33,17 +33,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreCounter: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
+    
     // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         initializeButtonsGrid()
-
+        status.text = "😴"
+    
+        
+        
     }
   
     // MARK: Actions
     @IBAction func startGame(_ sender: UIButton) {
-        status.text = "Playing"
+        status.text = "😴"
         playRound(roundNumber: 1)
         score = 0
         scoreCounter.text = "0"
@@ -100,7 +104,8 @@ class ViewController: UIViewController {
             }
         } else {
             pressedButtonCounter = 0
-            status.text = "Finished"
+            status.text = "😱"
+            
             pendingCounter.text = "0"
             top10.add(newScore: score)
             scoreCounter.text = "0"
@@ -131,6 +136,7 @@ class ViewController: UIViewController {
     
     // MARK: Game Methods
     func playRound(roundNumber : Int) {
+        status.text = "🤔"
         sequenceList = generator.getSequenceList(size: roundNumber)
         turnIndicator.text = "Fred"
         pendingCounter.text = String(roundNumber)
